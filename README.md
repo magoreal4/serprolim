@@ -16,9 +16,9 @@ pip install -r requirements.txt
 <h3>3. Realizar cambios en los archivos</h3>
 
 ```txt
-web_base.com
-web_base.socket
-web_base.service
+serprolim.com
+serprolim.socket
+serprolim.service
 ```
 <h3>3. Base de datos y archivos estaticos</h3>
 
@@ -30,17 +30,17 @@ python ./app/manage.py collectstatic
 <h3>4. Service, socket</h3>
 
 ```$
-sudo cp web_base.socket /etc/systemd/system/web_base.socket
-sudo cp web_base.service /etc/systemd/system/web_base.service
-sudo systemctl enable web_base
-sudo systemctl start web_base
+sudo cp serprolim.socket /etc/systemd/system/serprolim.socket
+sudo cp serprolim.service /etc/systemd/system/serprolim.service
+sudo systemctl enable serprolim
+sudo systemctl start serprolim
 ```
 
 <h3>5. Nginx</h3>
 
 ```$
-sudo cp web_base.com /etc/nginx/sites-available/web_base.com
-sudo ln -s /etc/nginx/sites-available/web_base.com /etc/nginx/sites-enabled/web_base.com
+sudo cp serprolim.com /etc/nginx/sites-available/serprolim.com
+sudo ln -s /etc/nginx/sites-available/web_base.com /etc/nginx/sites-enabled/serprolim.com
 sudo nginx -t
 sudo systemctl restart nginx
 ```
@@ -54,7 +54,7 @@ pip freeze> requirements.txt
 python ./app/manage.py collectstatic --no-input --clear
 sudo chmod 777 static_volume/
 systemctl status nginx
-systemctl status web_base
+systemctl status serprolim
 
 systemctl stop [servicename]
 systemctl disable [servicename]
