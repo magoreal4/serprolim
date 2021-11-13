@@ -1,10 +1,10 @@
-# dj_web_base
+# serprolim django
 
 <h3>1. Clonando el repositorio</h3>
 
 ```$
-git clone https://github.com/magoreal4/dj_web_base.git
-mv dj_web_base <your project>
+git clone https://github.com/magoreal4/serprolim.git
+mv serprolim <your project>
 ```
 <h3>2. Entorno virtual y paquetes</h3>
 
@@ -66,5 +66,4 @@ systemctl daemon-reload
 systemctl reset-failed
 ```
 # serprolim
-# serprolim
-# serprolim
+
