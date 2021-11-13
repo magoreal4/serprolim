@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/leaflet.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/floating-wpp.min.css' %}">
+{% endblock header%}
+
+{% block content%}
+
+    {% include 'template-parts/banner.html' %} 
+
+    {% include 'template-parts/mapa-cotiza.html' %}
+
+    {% include 'template-parts/clientes.html' %}
+
+    {% include 'template-parts/faq.html' %}
+
+    {% include 'footer.html' %}
+
+{% endblock content%}
+
+{% block script %}
+
+        <script type="text/javascript" src="{% static 'js/main.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.AccuratePosition.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/mapa.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/poly.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/cotizar.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/modal.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
+
+{% endblock script %}

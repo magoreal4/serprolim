@@ -1,0 +1,10 @@
+# /etc/systemd/system/web_base.socket
+
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/web_base.sock
+
+[Install]
+WantedBy=sockets.target

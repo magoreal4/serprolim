@@ -1,0 +1,20 @@
+# /etc/systemd/system/web_base.service
+
+[Unit]
+Description=gunicorn daemon
+Requires=web_base.socket
+After=network.target
+
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/gonzalo/dj_web_base/app
+ExecStart=/home/gonzalo/dj_web_base/virtual/bin/gunicorn \
+    --access-logfile - \
+    --workers 3 \
+    --bind unix:/run/web_base.sock \
+    config.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

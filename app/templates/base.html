@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    {% block header %}
+    {% endblock header %}
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'img/favicon/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <title>Limpieza Pozos Septicos</title>
+</head>
+<body class="container relative mx-auto bg-gray-900 min-h-full">
+  <div id="whatsapp" class="z-10000 fixed bottom-12 left-1 sm:left-3 lg:left-10 xl:left-20 2xl:left-40"></div>
+
+  <nav class="sticky top-0 shadow z-10 bg-yellow-350 flex justify-end md:justify-center items-center">      
+    <a href="/" class="hidden absolute -left-3 pb-2 -pl-1 -top-1 rounded-br-lg bg-yellow-350 font-extrabold m-3 uppercase sm:inline-flex">
+      <img src="{% static 'img/logo-texto.png' %}" >
+    </a>
+    <a href="/" class="inline-flex sm:hidden absolute -left-1 -pl-1 bg-yellow-350 m-3 uppercase ">
+      <h4>SERPROLIM </h4>
+    </a>
+    <div class="hidden absolute top-11 left-24 sm:block" style="height: 50px; overflow: hidden;" >
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 120%;">
+        <path class="fill-current text-yellow-350"  d="M0.28,125.81 C36.39,-58.70 162.81,10.36 281.31,-19.23 L286.96,-0.48 L0.00,0.00 Z" >
+        </path>
+        
+      </svg>
+    </div>
+    <button id="mobileMenuButton" class="p-3 focus:outline-none md:hidden" title="Open side menu">
+      <!-- SVG For "x" button -->
+        <svg id="mobileMenuButtonClose" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      <!-- SVG For "Menu burger" button -->
+        <svg id="mobileMenuButtonOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+  
+  <!-- List of nav item -->
+    <div id="sideMenuHideOnMobile" class="bg-yellow-350 font-semibold z-10 rounded-bl-md flex absolute md:relative top-0 right-0 transition-all duration-500 transform translate-x-0
+                                          w-1/2 md:w-auto
+                                          px-3 md:px-0
+                                          flex-col md:flex-row
+                                          -translate-y-full md:translate-y-0
+                                          md:mt-1 md:items-center md:mx-1 md:uppercase">
+        <a href="/#cotiza" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Cotiza</a>
+        <a href="/#clientes" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Clientes</a>
+        <a href="/#preguntas" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Preguntas</a>
+        <a href="/blog" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Noticias</a>
+        
+    </div>
+  
+  </nav>
+  
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block script %}
+    {% endblock script %}
+        
+</body>
+</html>

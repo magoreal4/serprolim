@@ -1,0 +1,38 @@
+{
+  "name": "pozosscz.com",
+  "version": "1.0.0",
+  "description": "<h3>1. Clonando el repositorio</h3>",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/tailwind.css -o ./app/static/css/main.css",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./app/static/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magoreal4/pozosscz.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magoreal4/pozosscz.com/issues"
+  },
+  "homepage": "https://github.com/magoreal4/pozosscz.com#readme",
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.10",
+    "postcss-cli": "^9.0.1"
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
+  }
+}

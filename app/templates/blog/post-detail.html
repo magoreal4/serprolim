@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block header%}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+{% endblock header%}
+
+{% block content%}
+<div class="bg-gray-200 text-center ">
+    <div id="blog" class="py-20 px-4 lg:px-8 md:mx-5 font-noto sm:py-4 bg-white">
+        <article id="{{ object.slug }}">
+            <h1 class="font-bold mx-auto w-3/4 md:w-4/5 xl:w-1/2 lg:w-3/4"> {{ object.title }} </h1>
+            <h2 class="pb-2 font-bold mx-auto w-3/4 md:w-4/5 lg:w-1/2"> {{ object.subtitle }}</h2>
+            {{object.content|safe}}
+        </article>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
