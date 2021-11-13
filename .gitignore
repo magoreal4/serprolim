@@ -293,3 +293,6 @@ pip-selfcheck.json
 
 virtual/
 src/
+
+package-lock.json
+postcss.config.js
