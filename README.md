@@ -40,7 +40,7 @@ sudo systemctl start serprolim
 
 ```$
 sudo cp serprolim.com /etc/nginx/sites-available/serprolim.com
-sudo ln -s /etc/nginx/sites-available/web_base.com /etc/nginx/sites-enabled/serprolim.com
+sudo ln -s /etc/nginx/sites-available/serprolim.com /etc/nginx/sites-enabled/serprolim.com
 sudo nginx -t
 sudo systemctl restart nginx
 ```
