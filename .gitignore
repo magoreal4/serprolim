@@ -292,7 +292,7 @@ pip-selfcheck.json
 # End of https://www.toptal.com/developers/gitignore/api/node,django,virtualenv
 
 virtual/
-src/
+
 
 package-lock.json
 postcss.config.js
