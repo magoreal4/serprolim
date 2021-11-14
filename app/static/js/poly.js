@@ -1,4 +1,5 @@
-jQuery(document).ready(function($){
+// jQuery(document).ready(function($){
+
 
 // Km. del 5 al 50 con Distancia cada 5Km.
 // del 60 al 100 cada 10 Km
@@ -129,4 +130,6 @@ var ppailas = [[-17.660531964359937,-62.80191916726624],
 [-17.65766944744522,-62.80779480492301],
 [-17.660286607551253,-62.8030324105955]];
 
-});
+
+
+// });

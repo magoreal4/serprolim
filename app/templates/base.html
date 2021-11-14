@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
     {% block header %}
     {% endblock header %}
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
+    {% comment %} <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png' %}">
     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png' %}">
@@ -22,9 +22,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'img/favicon/manifest.json' %}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{% static 'img/favicon/ms-icon-144x144.png' %}">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff"> {% endcomment %}
+    {% comment %} <meta name="msapplication-TileImage" content="{% static 'img/favicon/ms-icon-144x144.png' %}"> {% endcomment %}
+    {% comment %} <meta name="theme-color" content="#ffffff"> {% endcomment %}
     <title>Limpieza Pozos Septicos</title>
 </head>
 <body class="container relative mx-auto bg-gray-900 min-h-full">
