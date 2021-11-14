@@ -10,19 +10,17 @@ jQuery(document).ready(function($){
   $('.leaflet-container').css('cursor','crosshair'); //Cursor de cruz Mapa
   map.scrollWheelZoom.disable();
 
-
   // Agrega boton de posicion
-  
   L.control.custom({
       position: 'topright',
-      content: '<button class="absolute top-2 right-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">' +
+      content: '<button class=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">' +
       '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">' +
           '<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />' +
       '</svg>' +
       '</button>',
       style: {
-        margin: '20px',
-        padding: '5px 0 0 0',
+        // margin: '20px',
+        // padding: '5px 0 0 0',
         cursor: 'pointer',
       },
       events: {
@@ -40,6 +38,20 @@ jQuery(document).ready(function($){
       }
     })
     .addTo(map);
+
+ // Agrega boton de posicion
+ L.control.custom({
+  position: 'bottomright',
+  content: '<div class="text-center px-1">' +
+  '<button id="EnviarUbicacion" onclick="openModal()" class="bg-green-600 hover:bg-green-700 text-xl text-white py-1 px-6 border border-green-700 rounded cursor-not-allowed opacity-50" disabled="true">' +
+  'Cotizar' +
+  '</button>' +
+  '</div>',
+  style: {
+    cursor: 'pointer',
+  },
+})
+.addTo(map);
 
   // funciones de mapa
   function onAccuratePositionError(e) {
