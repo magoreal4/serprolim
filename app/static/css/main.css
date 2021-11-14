@@ -798,10 +798,6 @@ a {
   height: 75vh;
 }
 
-.h-screen\/2 {
-  height: 50vh;
-}
-
 .max-h-screen {
   max-height: 100vh;
 }
