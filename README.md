@@ -56,12 +56,12 @@ sudo chmod 777 static_volume/
 systemctl status nginx
 systemctl status serprolim
 
-systemctl stop [servicename]
-systemctl disable [servicename]
-rm /etc/systemd/system/[servicename]
-rm /etc/systemd/system/[servicename] # and symlinks that might be related
-rm /usr/lib/systemd/system/[servicename] 
-rm /usr/lib/systemd/system/[servicename] # and symlinks that might be related
+systemctl stop serprolim
+systemctl disable serprolim
+rm /etc/systemd/system/serprolim
+rm /etc/systemd/system/serprolim # and symlinks that might be related
+rm /usr/lib/systemd/system/serprolim
+rm /usr/lib/systemd/system/serprolim # and symlinks that might be related
 systemctl daemon-reload
 systemctl reset-failed
 ```
