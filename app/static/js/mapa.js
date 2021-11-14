@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
       '</svg>' +
       '</button>',
       style: {
-        // margin: '',
+        // margin: '20px',
         // padding: '5px 0 0 0',
         cursor: 'pointer',
       },
@@ -29,7 +29,6 @@ jQuery(document).ready(function($){
               "<div class='animate-spin rounded-full h-32 w-32 border-b-2 border-white'>" + 
             "</div>" +
           "</div>");
-
           map.findAccuratePosition({
             maxWait: 7000,
             desiredAccuracy: 25
@@ -38,6 +37,20 @@ jQuery(document).ready(function($){
       }
     })
     .addTo(map);
+
+ // Agrega boton de posicion
+ L.control.custom({
+  position: 'bottomright',
+  content: '<div class="text-center px-1">' +
+  '<button id="EnviarUbicacion" onclick="openModal()" class="bg-green-600 hover:bg-green-700 text-xl text-white py-1 px-6 border border-green-700 rounded cursor-not-allowed opacity-50" disabled="true">' +
+  'Cotizar' +
+  '</button>' +
+  '</div>',
+  style: {
+    cursor: 'pointer',
+  },
+})
+.addTo(map);
 
   // funciones de mapa
   function onAccuratePositionError(e) {
