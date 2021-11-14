@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+  loadscript = false;
   marker = null;
   var map = L.map('map').setView([-17.784071, -63.180522], 11);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -75,6 +76,17 @@ jQuery(document).ready(function($){
     }
     console.log(marker._latlng.lat);
     console.log(marker._latlng.lng);
+    // Cargas el srcipt
+    if (!loadscript) {
+      var script = document.createElement('script');
+      script.src = STATIC_FILES.COTIZAR;
+      script.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(script);    
+      console.log("script loaded :)");
+      loadscript=true;
+      }
+    
+ 
   }
 
   function addStatus(message, className) {
@@ -94,6 +106,18 @@ jQuery(document).ready(function($){
     marker = L.marker(e.latlng).addTo(map);
     console.log(marker._latlng.lat);
     console.log(marker._latlng.lng);
+
+    // Cargas el srcipt
+    if (!loadscript) {
+    var script = document.createElement('script');
+    script.src = STATIC_FILES.COTIZAR;
+    script.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(script);    
+    console.log("script loaded :)");
+    loadscript=true;
+    }
+    
+    
   }
 
   map.on('accuratepositionprogress', onAccuratePositionProgress);

@@ -20,21 +20,8 @@
 {% endblock content%}
 
 {% block script %}
-<script type="text/javascript">
-    function downloadJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "{% static 'js/cotizar.js' %}";
-        document.body.appendChild(element);
-    }
-    if (window.addEventListener)
-        window.addEventListener("load", downloadJSAtOnload, false);
-    else if (window.attachEvent)
-        window.attachEvent("onload", downloadJSAtOnload);
-    else window.onload = downloadJSAtOnload;
-</script>
-<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
-        {% comment %} <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"> {% endcomment %}
-        {% comment %} <script type="text/javascript" src="{% static 'js/poly.js' %}" ></script> {% endcomment %}
+
+        <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/main.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
@@ -42,5 +29,9 @@
         <script type="text/javascript" src="{% static 'js/mapa.js' %}" ></script>
         {% comment %} <script type="text/javascript" src="{% static 'js/cotizar.js' %}" ></script> {% endcomment %}
         <script type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
-
+        <script type="text/javascript">
+            STATIC_FILES = {
+                "COTIZAR": "{% static 'js/cotizar.js' %}",
+            };
+        </script>
 {% endblock script %}

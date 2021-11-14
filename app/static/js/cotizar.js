@@ -1,7 +1,5 @@
 jQuery(document).ready(function($){
-// jQuery(document).ready(function($){
-
-
+  
 // Km. del 5 al 50 con Distancia cada 5Km.
 // del 60 al 100 cada 10 Km
 // https://maps.openrouteservice.org/reach?n1=-17.708136&n2=-63.081436&n3=10&a=-17.743792,-63.130499&b=0&i=0&j1=30&j2=15&k1=en-US&k2=km
@@ -131,16 +129,26 @@ var ppailas = [[-17.660531964359937,-62.80191916726624],
 [-17.65766944744522,-62.80779480492301],
 [-17.660286607551253,-62.8030324105955]];
 
-
-
-// });
-
-  const kmMat = [km5, km10, km15, km20, km25, km30, km35, km40, km45, km50];
-  const tarifa = [300, 350, 400, 450, 500, 600, 700, 800, 900, 1000];
+  var kmMat = [km5, km10, km15, km20, km25, km30, km35, km40, km45, km50];
+  var tarifa = [300, 350, 400, 450, 500, 600, 700, 800, 900, 1000];
   // console.log(kmMat.length);
   // console.log(tarifa.length);
 
-$('#EnviarUbicacion').on('click', function() {
+$('#EnviarUbicacion').on('click', async function() {
+  // if (!loadscript) {
+  //   var script = document.createElement('script');
+  //   script.src = STATIC_FILES.POLY;
+  //   script.type = "text/javascript";
+  //   document.getElementsByTagName('head')[0].appendChild(script);    
+  //   console.log("script loaded :)");
+    
+    
+
+
+
+  //   console.log(STATIC_FILES.POLY);
+  //   loadscript=true;
+  // }
   var i = 0;
   var j = 0;
   var disponibilidad = false;
@@ -175,6 +183,7 @@ $('#EnviarUbicacion').on('click', function() {
   $('#confirmar').text('Contactarse'); //cambia el texto de precio
   disponibilidad = false;
 }
+
 $('#confirmar').on('click', function() {
   console.log(disponibilidad);
   if (disponibilidad) {

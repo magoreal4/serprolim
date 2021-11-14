@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   var mobileMenuButton = document.getElementById("mobileMenuButton");
   mobileMenuButton.onclick = function() {
@@ -39,4 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // headerTitle: 'Welcome!',
     });
   });
+
+
 });
