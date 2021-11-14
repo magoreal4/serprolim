@@ -43,7 +43,7 @@ jQuery(document).ready(function($){
  L.control.custom({
   position: 'bottomright',
   content: '<div class="text-center px-1">' +
-  '<button id="EnviarUbicacion" onclick="openModal()" class="bg-green-600 hover:bg-green-700 text-xl text-white py-1 px-6 border border-green-700 rounded cursor-not-allowed opacity-50" disabled="true">' +
+  '<button id="EnviarUbicacion" onclick="openModal()" class="bg-green-600 hover:bg-green-700 text-xl text-white py-1 px-6 border border-green-700 rounded cursor-not-allowed opacity-50" disabled="true" aria-label="Ubicar">' +
   'Cotizar' +
   '</button>' +
   '</div>',
