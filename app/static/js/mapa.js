@@ -19,8 +19,8 @@ jQuery(document).ready(function($){
       '</svg>' +
       '</button>',
       style: {
-        // margin: '20px',
-        // padding: '5px 0 0 0',
+        margin: '',
+        padding: '5px 0 0 0',
         cursor: 'pointer',
       },
       events: {
@@ -39,7 +39,7 @@ jQuery(document).ready(function($){
     })
     .addTo(map);
 
- // Agrega boton cotiza
+ // Agrega boton de posicion
  L.control.custom({
   position: 'bottomright',
   content: '<div class="text-center px-1">' +
@@ -48,6 +48,8 @@ jQuery(document).ready(function($){
   '</button>' +
   '</div>',
   style: {
+    margin: '',
+    padding: '5px 0 0 0',
     cursor: 'pointer',
   },
 })
