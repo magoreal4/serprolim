@@ -39,7 +39,7 @@ jQuery(document).ready(function($){
     })
     .addTo(map);
 
- // Agrega boton de posicion
+ // Agrega boton cotiza
  L.control.custom({
   position: 'bottomright',
   content: '<div class="text-center px-1">' +
