@@ -5,6 +5,11 @@ class Blog(ListView):
     template_name = "blog/blog.html"
     model = Post
 
+    def get_queryset(self):
+        return Post.objects.filter(publish=True)
+    
+
+
 class PostDetail(DetailView):
     template_name = "blog/post-detail.html"
     model = Post

@@ -6,18 +6,11 @@ from blog import models
 
 @admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'subtitle', 'excerpt', 'imagen', 'date_added' )
+    list_display = ('title', 'subtitle', 'publish', 'imagen', 'date_added' )
     prepopulated_fields = {'slug':('title',),}
-    list_editable = ('subtitle', 'excerpt',)
+    list_editable = ('subtitle', 'publish')
     def imagen(self, obj):
         return format_html("<img src={} width='130' height='100'/>", obj.img.url)
-    # formfield_overrides = {
-    #     # models.CharField: {'widget': TextInput(attrs={'size':'20'})},
-    #     models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
-    # }    
-    # list_display = ('post', 'name', 'email', 'publish', 'status')
-    # list_filter = ('status', 'publish')
-    # search_fields = ('name', 'email', 'content')
 
 @admin.register(models.Imagen)
 class ImagenAdmin(admin.ModelAdmin):
@@ -33,7 +26,4 @@ class ImagenAdmin(admin.ModelAdmin):
     # list_filter = ('status', 'publish')
     # search_fields = ('name', 'email', 'content')
 
-# admin.site.register(Post)
-# admin.site.register(PostView)
-# admin.site.register(Comment)
 # admin.site.register(Like)

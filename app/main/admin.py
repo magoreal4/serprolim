@@ -22,7 +22,10 @@ class Background(admin.ModelAdmin):
         return format_html("<img src={} width='130' height='100'/>", obj.imagebg.url)
     
     def img(self, obj):
-        return format_html("<img src={} width='130' height='100'/>", obj.imagemain.url)
+        if(obj.imagemain):
+            return format_html("<img src={} width='130' height='100'/>", obj.imagemain.url)
+        else:
+            return format_html("<h2>Sin imagen</h2>")
 
 admin.site.register(Banner, Background)
 # admin.site.register(Cliente)

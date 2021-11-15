@@ -20,9 +20,7 @@
 {% endblock content%}
 
 {% block script %}
-
         <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/main.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.AccuratePosition.js' %}" ></script>
@@ -33,5 +31,18 @@
             STATIC_FILES = {
                 "COTIZAR": "{% static 'js/cotizar.js' %}",
             };
+        </script>
+        <script type="text/javascript">
+          $(function () {
+            $('#whatsapp').floatingWhatsApp({
+            phone: '+59163439303',
+            popupMessage: 'Hola, Como podemos ayuderle?',
+            message: "Requiero el servicio de limpieza de pozos séptico",
+            showPopup: false,
+            showOnIE: false,
+            size: 55,
+            headerTitle: 'Comunicate por Whatsapp!',
+                });
+            });
         </script>
 {% endblock script %}

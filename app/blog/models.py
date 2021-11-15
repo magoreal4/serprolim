@@ -1,5 +1,6 @@
 # https://www.youtube.com/watch?v=m3hhLE1KR5Q&t=772s
 from django.db import models
+from django.db.models.fields import BooleanField
 from tinymce import HTMLField
 
 class Post(models.Model):
@@ -10,11 +11,12 @@ class Post(models.Model):
     # )
 
     title = models.CharField(max_length=255)
-    subtitle = models.CharField(max_length=255, null=True)
+    subtitle = models.CharField(max_length=255, null=True, blank=True)
     slug = models.SlugField()
     img = models.ImageField()
-    excerpt = models.TextField()
+    excerpt = HTMLField()
     content = HTMLField()
+    publish = models.BooleanField(default=True)
     # content = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     

@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+// jQuery(document).ready(function($){
   
 // Km. del 5 al 50 con Distancia cada 5Km.
 // del 60 al 100 cada 10 Km
@@ -262,4 +262,4 @@ $('#fueraRango').on('click', function() {
 			}
 		}
     
-});
+// });

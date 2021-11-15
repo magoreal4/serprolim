@@ -8,7 +8,10 @@
 </style>
     
     <div class="py-10 flex flex-col md:flex-row items-center justify-around fondo bg-center bg-no-repeat bg-cover relative h-screen75 md:h-screen/2 max-h-screen">
-        <img class="w-72" src="{{ bg.imagemain.url }}" alt="{{ bg.name }}">
+    {% if bg.imagemain %}
+            <img class="w-72" src="{{ bg.imagemain.url }}" alt="{{ bg.name }}">
+    {% endif %}
+    
         <div class="text-center">
             <h1 class="w-72 py-4"> {{ bg.titulo_h1 }} </h1>
             <hr>

@@ -6,7 +6,7 @@ class Banner(models.Model):
     titulo_h1 = models.CharField("titulo", max_length=50)
     titulo_h2 = models.CharField("slogan", max_length=50)
     imagebg = models.ImageField("imagenbg", upload_to='background', height_field=None, width_field=None, max_length=None)
-    imagemain = models.ImageField("imagenmain", upload_to='imagemain', height_field=None, width_field=None, max_length=None)
+    imagemain = models.ImageField("imagenmain", upload_to='imagemain', height_field=None, width_field=None, max_length=None, null=True, blank=True)
     display = models.BooleanField(default=False)
     
     class Meta:
