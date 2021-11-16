@@ -26,18 +26,16 @@ html {
   scroll-behavior: smooth;
 }
 #cotiza, #clientes, #preguntas {
-  scroll-margin-top: 1.6em;
+  scroll-margin-top: 3em;
 }
 
 @layer utilities {
   @variants responsive {
       .masonry-3-col {
           column-count: 3;
-          column-gap: 0.1em;
       }
       .masonry-2-col {
           column-count: 2;
-          column-gap: 0.1em;
       }
       .break-inside {
            break-inside: avoid;

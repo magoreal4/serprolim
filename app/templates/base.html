@@ -10,55 +10,65 @@
     {% endblock header %}
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon"> 
+    <script data-ad-client="ca-pub-8540355060691220" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>Limpieza Pozos Septicos</title>
 </head>
-<body class="container relative mx-auto bg-gray-900 min-h-full">
-  <div id="whatsapp" class="z-10000 fixed bottom-12 left-1 sm:left-3 lg:left-10 xl:left-20 2xl:left-40"></div>
+<body class="xl:container mx-auto bg-gray-900 min-h-full">
+      <nav class="sticky top-0 shadow z-10 bg-yellow-350 flex justify-end md:justify-center items-center">      
+        <a href="/" class="hidden absolute -left-3 pb-2 -pl-1 -top-1 rounded-br-lg bg-yellow-350 font-extrabold m-3 uppercase sm:inline-flex">
+          <img src="{% static 'img/logo-texto.png' %}" >
+        </a>
+        <a href="/" class="inline-flex sm:hidden absolute -left-1 -pl-1 bg-yellow-350 m-3 uppercase ">
+          <h4>SERPROLIM </h4>
+        </a>
+        <div class="hidden absolute top-11 left-24 sm:block" style="height: 50px; overflow: hidden;" >
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 120%;">
+            <path class="fill-current text-yellow-350"  d="M0.28,125.81 C36.39,-58.70 162.81,10.36 281.31,-19.23 L286.96,-0.48 L0.00,0.00 Z" >
+            </path>      
+          </svg>
+        </div>
+        <button id="mobileMenuButton" class="p-3 focus:outline-none md:hidden" title="Open side menu">
+          <!-- SVG For "x" button -->
+            <svg id="mobileMenuButtonClose" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          <!-- SVG For "Menu burger" button -->
+            <svg id="mobileMenuButtonOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+      
+      <!-- List of nav item -->
+        <div id="sideMenuHideOnMobile" class="bg-yellow-350 font-semibold z-10 rounded-bl-md flex absolute md:relative top-0 right-0 transition-all duration-500 transform translate-x-0
+                                              w-1/2 md:w-auto
+                                              px-3 md:px-0
+                                              flex-col md:flex-row
+                                              -translate-y-full md:translate-y-0
+                                              md:mt-1 md:items-center md:mx-1 md:uppercase">
+            <a href="/#cotiza" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">
+            Cotización
+            </a>
+            <a href="/#clientes" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">
+            Servicios
+            </a>
+            <a href="/#preguntas" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">
+            Preguntas
+            </a>
+            <a href="/blog" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">
+            Blog
+            </a>
+            
+        </div>
+      </nav>
+        <!--side menu -->
 
-  <nav class="sticky top-0 shadow z-10 bg-yellow-350 flex justify-end md:justify-center items-center">      
-    <a href="/" class="hidden absolute -left-3 pb-2 -pl-1 -top-1 rounded-br-lg bg-yellow-350 font-extrabold m-3 uppercase sm:inline-flex">
-      <img src="{% static 'img/logo-texto.png' %}" >
-    </a>
-    <a href="/" class="inline-flex sm:hidden absolute -left-1 -pl-1 bg-yellow-350 m-3 uppercase ">
-      <h4>SERPROLIM </h4>
-    </a>
-    <div class="hidden absolute top-11 left-24 sm:block" style="height: 50px; overflow: hidden;" >
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 120%;">
-        <path class="fill-current text-yellow-350"  d="M0.28,125.81 C36.39,-58.70 162.81,10.36 281.31,-19.23 L286.96,-0.48 L0.00,0.00 Z" >
-        </path>      
-      </svg>
-    </div>
-    <button id="mobileMenuButton" class="p-3 focus:outline-none md:hidden" title="Open side menu">
-      <!-- SVG For "x" button -->
-        <svg id="mobileMenuButtonClose" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-      <!-- SVG For "Menu burger" button -->
-        <svg id="mobileMenuButtonOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-    </button>
-  
-  <!-- List of nav item -->
-    <div id="sideMenuHideOnMobile" class="bg-yellow-350 font-semibold z-10 rounded-bl-md flex absolute md:relative top-0 right-0 transition-all duration-500 transform translate-x-0
-                                          w-1/2 md:w-auto
-                                          px-3 md:px-0
-                                          flex-col md:flex-row
-                                          -translate-y-full md:translate-y-0
-                                          md:mt-1 md:items-center md:mx-1 md:uppercase">
-        <a href="/#cotiza" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Cotiza</a>
-        <a href="/#clientes" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Clientes</a>
-        <a href="/#preguntas" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Preguntas</a>
-        <a href="/blog" class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-white hover:text-white transition-all duration-500 py-1 sm:p-0">Noticias</a>
-        
-    </div>
-  
-  </nav>
-  
     {% block content %}
     {% endblock content %}
+    
       <script type="text/javascript" src="{% static 'js/main.js' %}" ></script>
     {% block script %}
     {% endblock script %}
+
+    {% include 'footer.html' %}
         
 </body>
 </html>

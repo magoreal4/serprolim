@@ -1,14 +1,9 @@
 # https://www.youtube.com/watch?v=m3hhLE1KR5Q&t=772s
 from django.db import models
-from django.db.models.fields import BooleanField
 from tinymce import HTMLField
+from django.contrib.sites.models import Site
 
 class Post(models.Model):
-
-    # options = (
-    #     ('draft', 'Draft'),
-    #     ('published', 'Published')
-    # )
 
     title = models.CharField(max_length=255)
     subtitle = models.CharField(max_length=255, null=True, blank=True)
@@ -20,7 +15,6 @@ class Post(models.Model):
     # content = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     
-       
     class Meta:
         ordering = ['-date_added']
         verbose_name = "Post"
@@ -31,7 +25,7 @@ class Post(models.Model):
 
 class Imagen(models.Model):
     name = models.CharField(max_length=50)
-    img = models.ImageField(blank=True)    
+    img = models.ImageField()    
 
     class Meta:
         verbose_name = "Imagen"
@@ -40,6 +34,19 @@ class Imagen(models.Model):
     def __str__(self):
         return self.name
 
-    # def get_absolute_url(self):
-    #     return reverse("Comment_detail", kwargs={"pk": self.pk})
+class Anuncio(models.Model):
+    name = models.CharField(max_length=50)
+    img = models.ImageField()
+    display = models.BooleanField(default=False)    
 
+    class Meta:
+        verbose_name = "Anuncio"
+        verbose_name_plural = "Anuncios"
+
+    def __str__(self):
+        return self.name
+
+    # options = (
+    #     ('draft', 'Draft'),
+    #     ('published', 'Published')
+    # )

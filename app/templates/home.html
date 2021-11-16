@@ -7,15 +7,18 @@
 
 {% block content%}
 
-    {% include 'template-parts/banner.html' %} 
+    <div id="whatsapp" class="z-10000 fixed bottom-12 left-1 sm:left-3 lg:left-10 xl:left-20 2xl:left-40"></div>
+    <main>
+            
+        {% include 'template-parts/banner.html' %} 
 
-    {% include 'template-parts/mapa-cotiza.html' %}
+        {% include 'template-parts/mapa-cotiza.html' %}
 
-    {% include 'template-parts/clientes.html' %}
+        {% include 'template-parts/clientes.html' %}
 
-    {% include 'template-parts/faq.html' %}
+        {% include 'template-parts/faq.html' %}
 
-    {% include 'footer.html' %}
+    </main>
 
 {% endblock content%}
 
