@@ -6,11 +6,11 @@
 {% endblock header%}
 
 {% block content%}
-    <main class="flex flex-col lg:flex-row text-center">
+    <main class="flex flex-col md:flex-row text-center">
         <div class="bg-gray-200 w-full">
     {% for post in object_list %}
         {% if forloop.first %}
-            <div id="blog" class="py-24 sm:mx-4 md:mx-10 font-noto sm:py-4 bg-white shadow rounded-xl">
+            <div id="blog" class="py-24 sm:mx-4 font-noto sm:py-4 bg-white shadow rounded-xl">
                 <article id="{{ post.slug }}">
                     <h1 class="font-bold mx-auto w-3/4 md:w-4/5 lg:w-1/2"> <a href="{% url 'post_detail' post.slug %}" >{{ post.title }} </a></h1>
                     {% if post.subtitle %}
@@ -29,7 +29,7 @@
                     <!-- <p class="mx-auto pt-2 w-96 border-solid border-t-2 border-gray-200"> {{ post.date_added|date}} </p>       -->
                 </article>
             </div>
-            <div class="px-2 my-5 md:mx-8 md:masonry-2-col lg:masonry-3-col pb-3">            
+            <div class="px-2 my-5 md:mx-8 sm:masonry-2-col lg:masonry-3-col pb-3">            
         {% else %}
                 <a href="{% url 'post_detail' post.slug %}">
                     <div class="break-inside mx-2 sm:mx-8 mb-5 md:mx-2 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl duration-500 transform transition">
@@ -44,7 +44,7 @@
     {% endfor %}
             </div>
         </div>
-        <div class="hidden lg:block lg:w-96">
+        <div class="hidden md:block lg:w-96">
             <div class="bg-white h-full py-4">
     {% for post in object_list %}
                 <a href="{% url 'post_detail' post.slug %}">
