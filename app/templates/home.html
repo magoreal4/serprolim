@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/leaflet.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/floating-wpp.min.css' %}">
+    <link rel="stylesheet" async type="text/css" href="{% static 'css/leaflet.css' %}"/>
+    <link rel="stylesheet" async type="text/css" href="{% static 'css/floating-wpp.min.css' %}">
     <title>Limpieza de pozo y cámara séptica, pozo ciego - SERPROLIM</title>
     <meta name="description" content="Servicio de limpieza de pozo ciego, pozo séptico, cámara séptica, destranques. Precios justos y económicos. Santa Cruz,  Bolivia."/>
 {% endblock head %}
@@ -26,18 +26,18 @@
 
 {% block script %}
         <!--cotizar se carga mediante script -->
-        <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/leaflet/Leaflet.AccuratePosition.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/mapa.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
-        <script type="text/javascript">
+        <script async type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
+        <script async type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
+        <script async type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
+        <script async type="text/javascript" src="{% static 'js/leaflet/Leaflet.AccuratePosition.js' %}" ></script>
+        <script async type="text/javascript" src="{% static 'js/mapa.js' %}" ></script>
+        <script async type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
+        <script async type="text/javascript">
             STATIC_FILES = {
                 "COTIZAR": "{% static 'js/cotizar.js' %}",
             };
         </script>
-        <script type="text/javascript">
+        <script async type="text/javascript">
           $(function () {
             $('#whatsapp').floatingWhatsApp({
             phone: '+59163439303',
