@@ -1521,24 +1521,6 @@ html {
   scroll-margin-top: 3em;
 }
 
-/* 
-.link {
-    @apply py-4 px-3 hover:text-gray-800;
-} */
-
-/* @layer utilities {
-    .text-shadow-black {
-        text-shadow: 2px 2px 5px black;
-    }
-    .text-shadow-red {
-        text-shadow: 2px 2px 5px red;
-      }
-    .errorlist li {
-        text-align: center; 
-        color: #dc2626;
-    }
-} */
-
 @media (min-width: 640px) {
   .sm\:left-3 {
     left: 0.75rem;
@@ -1785,3 +1767,4 @@ html {
     left: 10rem;
   }
 }
+
