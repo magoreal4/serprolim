@@ -18,7 +18,7 @@ class ImagenAdmin(admin.ModelAdmin):
         return format_html("<img src={} width='130' height='100'/>", obj.img.url)
     def imgurl(self, obj):
         url =  format_html("{}", obj.img.url)
-        domain = 'https://limpiezapozossepticos'
+        domain = 'https://limpiezapozossepticos.com'
         return domain + url
     
 @admin.register(models.Anuncio)

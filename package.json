@@ -1,12 +1,12 @@
 {
-  "name": "pozosscz.com",
+  "name": "limpiezapozossepticos.com",
   "version": "1.0.0",
-  "description": "<h3>1. Clonando el repositorio</h3>",
+  "description": "SERPOLIM - Limpieza de pozos septicos",
   "main": "index.js",
   "scripts": {
     "build:css": "postcss ./src/tailwind.css -o ./app/static/css/main.css",
     "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./app/static/css/main.css",
-    "build:min": "postcss ./app/static/css/leaflet.css -u cssnano -o ./app/static/css/leaflet.min.css"
+    "build:min": "postcss ./app/static/css/leaflet.css -u cssnano autoprefixer -o ./app/static/css/leaflet.min.css"
   },
   "repository": {
     "type": "git",
