@@ -26,18 +26,18 @@
 
 {% block script %}
         <!--cotizar se carga mediante script -->
-        <script async type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
-        <script async type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/leaflet/leaflet.js' %}" ></script>
         <script async type="text/javascript" src="{% static 'js/leaflet/Leaflet.Control.Custom.js' %}" ></script>
         <script async type="text/javascript" src="{% static 'js/leaflet/Leaflet.AccuratePosition.js' %}" ></script>
         <script async type="text/javascript" src="{% static 'js/mapa.js' %}" ></script>
-        <script async type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/floating-wpp.min.js' %}"></script>
         <script async type="text/javascript">
             STATIC_FILES = {
                 "COTIZAR": "{% static 'js/cotizar.js' %}",
             };
         </script>
-        <script async type="text/javascript">
+        <script type="text/javascript">
           $(function () {
             $('#whatsapp').floatingWhatsApp({
             phone: '+59163439303',
