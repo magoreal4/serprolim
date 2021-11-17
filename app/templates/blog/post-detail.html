@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-{% block header%}
+{% block head %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
-{% endblock header%}
+    <title>{{ object.title }}</title>
+    <meta name="description" content="{{ object.metaDescription }}"/>
+{% endblock head %}
 
 {% block content%}
     <main class="flex flex-col md:flex-row text-center">
@@ -18,16 +20,18 @@
                 </article>
             </div>
         </div>
-        <div class="hidden md:block w-80">
+        <div class="hidden md:block w-80 lg:w-96">
             <div class="bg-white h-full py-4">
     {% for post in other_posts %}
+        {% if post.slug == object.slug %}
+        {% else %}
                 <a href="{% url 'post_detail' post.slug %}">
                     <div class="bg-yellow-350 border-2 m-2 p-2 py-4 rounded-lg shadow-md">
                         <h2 class="text-base">{{ post.title }}</h2>
                         <h2 class="text-base">{{ post.subtitle }} </h2>
                     </div>
                 </a>
-            
+        {% endif %}    
     {% endfor %}
     {% for anuncio in anuncio_list %}
                 <div class="text-black border-2 m-2 p-2 py-4 rounded-lg shadow-md">

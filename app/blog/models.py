@@ -12,11 +12,12 @@ class Post(models.Model):
     excerpt = HTMLField()
     content = HTMLField()
     publish = models.BooleanField(default=True)
-    # content = models.TextField()
+    order = models.IntegerField(default=0)
+    metaDescription = models.TextField(max_length=170, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
     
     class Meta:
-        ordering = ['-date_added']
+        ordering = ['order', '-date_added']
         verbose_name = "Post"
         verbose_name_plural = "Posts"
     

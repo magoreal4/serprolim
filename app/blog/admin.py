@@ -4,9 +4,9 @@ from blog import models
 
 @admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'subtitle', 'publish', 'imagen', 'date_added' )
-    prepopulated_fields = {'slug':('title',),}
-    list_editable = ('subtitle', 'publish')
+    list_display = ('title', 'subtitle', 'publish', 'order', 'imagen', 'metaDescription' )
+    prepopulated_fields = {'slug':('title',),'metaDescription':('title', 'subtitle')}
+    list_editable = ('subtitle', 'publish','order')
     def imagen(self, obj):
         return format_html("<img src={} width='130' height='100'/>", obj.img.url)
 
