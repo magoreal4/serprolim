@@ -15,11 +15,13 @@ SECRET_KEY = 'django-insecure-eh9^_8^=rsid1cv%t0f=_t&rv4+4y0v&^!ud4@cf2pw7nmwn%q
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',
+    # 'django.contrib.sitemaps',
 
     'main',
     'blog',
