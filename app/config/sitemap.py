@@ -6,25 +6,22 @@ from django.urls import reverse
 class Site:
     domain = 'limpiezapozossepticos.com'
 
-class Siteblog:
-    domain = 'limpiezapozossepticos.com/blog/'
-
 class PostSitemap(Sitemap):
-    changefreq = "daily"
+    changefreq = "weekly"
     priority = 0.8
  
     def get_urls(self, site=None, **kwargs):
-        site = Siteblog()
+        site = Site()
         return super(PostSitemap, self).get_urls(site=site, **kwargs)
  
     def items(self):
         return Post.objects.filter(publish=True)
     
     def location(self, obj):
-        return obj.pk
+        return '/blog/%s' % (obj.slug)
  
 class StaticSitemap(Sitemap):
-    changefreq = "yearly"
+    changefreq = "monthly"
     priority = 0.8
 
     def get_urls(self, site=None, **kwargs):
