@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 SECRET_KEY = 'django-insecure-eh9^_8^=rsid1cv%t0f=_t&rv4+4y0v&^!ud4@cf2pw7nmwn%q'
@@ -20,15 +20,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django.contrib.sites',
-    # 'django.contrib.sitemaps',
-
     'main',
     'blog',
     'tinymce',
+
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,5 +1,4 @@
 from django.db.models.base import Model
-from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from main.models import Banner, Cliente, Faq

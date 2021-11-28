@@ -1,7 +1,8 @@
 # https://www.youtube.com/watch?v=m3hhLE1KR5Q&t=772s
 from django.db import models
 from tinymce import HTMLField
-from django.contrib.sites.models import Site
+# from django.contrib.sites.models import Site
+from django.urls import reverse
 
 class Post(models.Model):
 
@@ -23,6 +24,9 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+    
+    # def get_absolute_url(self):
+    #     return reverse('app:detail', kwargs={'slug': self.slug})
 
 class Imagen(models.Model):
     name = models.CharField(max_length=50)

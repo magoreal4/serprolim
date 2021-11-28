@@ -8,7 +8,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', views.Blog.as_view(), name='blog'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
-    # path('<int:pk>/<slug:slug>/', views.PostDetail.as_view(), name='Postdetail'),
 ]
 
 if settings.DEBUG:
