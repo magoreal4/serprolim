@@ -1,10 +1,7 @@
-server {
-    server_name www.limpiezapozossepticos.com;
-    return 301 $scheme://limpiezapozossepticos.com$request_uri;
-}
+
 
 server {
-    server_name limpiezapozossepticos.com;
+    server_name limpiezapozossepticos.com www.limpiezapozossepticos.com;
 
     location /static/ {
         autoindex on;
@@ -33,7 +30,7 @@ server {
 server {
 
     if ($host = www.limpiezapozossepticos.com) {
-        return 301 https://$host$request_uri;
+        return 301 $scheme://limpiezapozossepticos.com$request_uri;
     } # managed by Certbot
 
 
@@ -45,4 +42,5 @@ server {
     server_name limpiezapozossepticos.com www.limpiezapozossepticos.com;
     listen 80;
     return 404; # managed by Certbot
+
 }
