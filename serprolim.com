@@ -1,21 +1,7 @@
-server {
-<<<<<<< HEAD
-    server_name www.limpiezapozossepticos.com;
-    return 301 $scheme://limpiezapozossepticos.com$request_uri;
-}
+
 
 server {
-    server_name limpiezapozossepticos.com;
-=======
-
     server_name limpiezapozossepticos.com www.limpiezapozossepticos.com;
-    # server_name localhost;
-
-  #  location = /favicon.ico { 
-   #     access_log off; 
-    #    log_not_found off; 
-     #   }
->>>>>>> c63ec26892e21893088170035b874f9f747da653
 
     location /static/ {
         autoindex on;
@@ -42,15 +28,9 @@ server {
 }
 
 server {
-<<<<<<< HEAD
 
     if ($host = www.limpiezapozossepticos.com) {
-        return 301 https://$host$request_uri;
-=======
-    if ($host = www.limpiezapozossepticos.com) {
-        rewrite ^/(.*) https://limpiezapozossepticos.com/$1 permanent;
-        #return 301 https://$host$request_uri;
->>>>>>> c63ec26892e21893088170035b874f9f747da653
+        return 301 $scheme://limpiezapozossepticos.com$request_uri;
     } # managed by Certbot
 
 
@@ -63,7 +43,4 @@ server {
     listen 80;
     return 404; # managed by Certbot
 
-<<<<<<< HEAD
 }
-=======
->>>>>>> c63ec26892e21893088170035b874f9f747da653
