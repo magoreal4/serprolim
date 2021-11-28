@@ -7,9 +7,9 @@ from django.contrib.sitemaps.views import sitemap
 # app_name = "main"
 
 sitemaps = {
-    'blog':PostSitemap,
-    'static':StaticSitemap,
-    'main': MainSitemap
+    'main': MainSitemap,
+    'static': StaticSitemap,
+    'blog': PostSitemap,
 }
 
 urlpatterns = [
