@@ -16,6 +16,9 @@ class PostSitemap(Sitemap):
  
     def items(self):
         return Post.objects.filter(publish=True)
+
+    def lastmod(self, obj):
+        return obj.date_added
     
     def location(self, obj):
         return '/blog/%s' % (obj.slug)
