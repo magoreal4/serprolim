@@ -7,7 +7,7 @@ class Site:
     domain = 'limpiezapozossepticos.com'
 
 class PostSitemap(Sitemap):
-    changefreq = "daily"
+    changefreq = "weekly"
     priority = 0.8
  
     def get_urls(self, site=None, **kwargs):
